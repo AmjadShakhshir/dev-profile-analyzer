@@ -34,7 +34,7 @@ def main():
     }
 
     for (company, skill), prob in conditional_probabilities.items():
-        print(f"P({skill} | {company}): {prob:.16f}")
+        print(f"P({skill} | {company}) = {prob:.16f}")
 
 if __name__ == "__main__":
     main()
