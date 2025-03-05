@@ -1,0 +1,2 @@
+orjson==3.10.15
+multiprocess==0.70.15
