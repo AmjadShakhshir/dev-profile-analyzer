@@ -68,6 +68,15 @@ A high-performance Python program that processes JSON profiles, extracts company
     P(Rust | Amazon): 0.4648028962188254
 ```
 
+## 🛠 Workflow Diagram
+
+![flowchart](assets/Dev-profiles-flowchart.jpg)
+
+
+## 🏗️ High-Level Design
+
+![design](assets/high-level-abstraction.jpg)
+
 ## 🔍 How It Works
     1️⃣ Read JSON Files
         * Uses orjson.loads() for fast and efficient JSON parsing.
