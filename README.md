@@ -58,15 +58,15 @@ A high-performance Python program that processes JSON profiles, extracts company
     python src/main.py
 ```
 
-**This will:**
+## **This will:**
     - Load all JSON profiles from the profiles/ directory.
     - Process them in parallel using multiprocessing workers.
     - Compute conditional probabilities P(Skill | Company).
     - Print the results in the following format:
-        ```less
-        P(Go | Amazon): 0.4722445695897024
-        P(Rust | Amazon): 0.4648028962188254
-        ```
+```less
+    P(Go | Amazon): 0.4722445695897024
+    P(Rust | Amazon): 0.4648028962188254
+```
 
 ## 🔍 How It Works
     1️⃣ Read JSON Files
