@@ -4,13 +4,13 @@ A high-performance Python program that processes JSON profiles, extracts company
 
 ## 🚀 Features
 
-    ✅ **Processes JSON profiles** in bulk using multiprocessing
-    ✅ **Extracts unique companies and skills** from JSON files
-    ✅ **Counts occurrences** of companies and skills
-    ✅ **Computes conditional probabilities** `P(Skill | Company)`
-    ✅ **Uses orjson for fast JSON parsing**
-    ✅ **Utilizes defaultdict for optimized dictionary operations**
-    ✅ **Parallel processing with workers (multiprocessing)** to speed up batch processing  
+- ✅ **Processes JSON profiles** in bulk using multiprocessing  
+- ✅ **Extracts unique companies and skills** from JSON files  
+- ✅ **Counts occurrences** of companies and skills  
+- ✅ **Computes conditional probabilities** `P(Skill | Company)`  
+- ✅ **Uses orjson for fast JSON parsing**  
+- ✅ **Utilizes defaultdict for optimized dictionary operations**  
+- ✅ **Parallel processing with workers (multiprocessing)** to speed up batch processing 
 
 ---
 
