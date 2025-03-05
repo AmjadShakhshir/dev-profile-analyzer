@@ -4,18 +4,18 @@ A high-performance Python program that processes JSON profiles, extracts company
 
 ## 🚀 Features
 
-✅ **Processes JSON profiles** in bulk using multiprocessing
-✅ **Extracts unique companies and skills** from JSON files
-✅ **Counts occurrences** of companies and skills
-✅ **Computes conditional probabilities** `P(Skill | Company)`
-✅ **Uses orjson for fast JSON parsing**
-✅ **Utilizes defaultdict for optimized dictionary operations**
-✅ **Parallel processing with workers (multiprocessing)** to speed up batch processing  
+    ✅ **Processes JSON profiles** in bulk using multiprocessing
+    ✅ **Extracts unique companies and skills** from JSON files
+    ✅ **Counts occurrences** of companies and skills
+    ✅ **Computes conditional probabilities** `P(Skill | Company)`
+    ✅ **Uses orjson for fast JSON parsing**
+    ✅ **Utilizes defaultdict for optimized dictionary operations**
+    ✅ **Parallel processing with workers (multiprocessing)** to speed up batch processing  
 
 ---
 
 ## 📂 Project Structure
-
+```pgsql
 ├── README.md
 ├── __pycache__
 ├── data_processing.py
@@ -23,28 +23,34 @@ A high-performance Python program that processes JSON profiles, extracts company
 ├── main.py
 ├── profiles
 └── requirements.txt
-
+```
 
 ---
 
 ## ⚡ Installation
 
 1. **Clone the repository**
-   ```sh
+```sh
    git clone https://github.com/your-username/dev-profile-analyzer.git
    cd dev-profile-analyzer
+```
 
 2. **Create a virtual environment**
+```sh
     python -m venv venv
     source venv/bin/activate  # On macOS/Linux
     venv\Scripts\activate     # On Windows
+```
 
 3. **Install dependencies**
+```sh
     pip install -r requirements.txt
-    ```
+```
 
 4. **Profiles folder**
+```sh
     https://drive.google.com/file/d/1En6JSPE0o3vMxf6l9W8fn4RQAwIbSZx7/view
+```
 
 ## 📜 Usage
 **To run the program, execute:**
@@ -64,17 +70,21 @@ A high-performance Python program that processes JSON profiles, extracts company
 
 ## 🔍 How It Works
     1️⃣ Read JSON Files
-    * Uses orjson.loads() for fast and efficient JSON parsing.
+        * Uses orjson.loads() for fast and efficient JSON parsing.
+
     2️⃣ Extract Companies and Skills
-    * Extracts unique values from companies and skills fields.
+        * Extracts unique values from companies and skills fields.
+
     3️⃣ Count Occurrences
-    * Uses defaultdict(int) to efficiently count occurrences.
+        * Uses defaultdict(int) to efficiently count occurrences.
+
     4️⃣ Compute Conditional Probabilities
-    * Uses joint probability and Bayes' theorem to calculate P(Skill | Company).
+        * Uses joint probability and Bayes' theorem to calculate P(Skill | Company).
+
     5️⃣ Parallel Processing with Workers
-    * The program uses multiprocessing workers to speed up batch processing.
-    * Number of workers is set in NUM_WORKERS = 4 (configurable).
-    * Each worker processes a batch of JSON files in parallel, reducing execution time.
+        * The program uses multiprocessing workers to speed up batch processing.
+        * Number of workers is set in NUM_WORKERS = 4 (configurable).
+        * Each worker processes a batch of JSON files in parallel, reducing execution time.
 
 
 ## 📌 Example JSON Profile
@@ -92,9 +102,9 @@ A high-performance Python program that processes JSON profiles, extracts company
     - multiprocessing (Efficient batch processing)
 
 ## Install dependencies via:
-    ```sh
+```sh
     pip install -r requirements.txt
-    ```
+```
 
 ## 🔴 Core Bottlenecks (Why Are These Challenges?)
     1️⃣ Memory Bottleneck – Large Dataset (10,000 Files)
