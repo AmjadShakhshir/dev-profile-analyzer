@@ -15,6 +15,9 @@ def process_profiles_batch(file_list: List[Path]) -> Tuple[Set[str], Set[str], D
         companies = set(profile.get("companies", []))
         skills = set(profile.get("skills", []))
 
+        if len(companies) < 3:
+            continue
+
         unique_companies.update(companies)
         unique_skills.update(skills)
 
