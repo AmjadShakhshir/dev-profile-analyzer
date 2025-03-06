@@ -4,13 +4,14 @@ A high-performance Python program that processes JSON profiles, extracts company
 
 ## 🚀 Features
 
-- ✅ **Processes JSON profiles** in bulk using multiprocessing  
-- ✅ **Extracts unique companies and skills** from JSON files  
-- ✅ **Counts occurrences** of companies and skills  
-- ✅ **Computes conditional probabilities** `P(Skill | Company)`  
-- ✅ **Uses orjson for fast JSON parsing**  
-- ✅ **Utilizes defaultdict for optimized dictionary operations**  
-- ✅ **Parallel processing with workers (multiprocessing)** to speed up batch processing 
+- ✅ **Processes JSON profiles** in bulk using multiprocessing
+- ✅ **Extracts unique companies and skills** from JSON files
+- ✅ **Counts occurrences** of companies and skills
+- ✅ **Filters profiles that have fewer than 3 companies** (only profiles with **3+ companies** are considered)
+- ✅ **Computes conditional probabilities** `P(Skill | Company)`
+- ✅ **Uses orjson for fast JSON parsing**
+- ✅ **Utilizes defaultdict for optimized dictionary operations**
+- ✅ **Parallel processing with workers (multiprocessing)** to speed up batch processing
 
 ---
 
@@ -61,6 +62,7 @@ A high-performance Python program that processes JSON profiles, extracts company
 ## **This will:**
     - Load all JSON profiles from the profiles/ directory.
     - Process them in parallel using multiprocessing workers.
+    - Filter out profiles that have fewer than 3 companies.
     - Compute conditional probabilities P(Skill | Company).
     - Print the results in the following format:
 ```less
@@ -83,14 +85,17 @@ A high-performance Python program that processes JSON profiles, extracts company
 
     2️⃣ Extract Companies and Skills
         * Extracts unique values from companies and skills fields.
+    
+    3️⃣ Filter Profiles with Less Than 3 Companies
+        * Profiles with fewer than 3 companies are skipped to ensure meaningful probability calculations.
 
-    3️⃣ Count Occurrences
+    4️⃣ Count Occurrences
         * Uses defaultdict(int) to efficiently count occurrences.
 
-    4️⃣ Compute Conditional Probabilities
+    5️⃣ Compute Conditional Probabilities
         * Uses joint probability and Bayes' theorem to calculate P(Skill | Company).
 
-    5️⃣ Parallel Processing with Workers
+    6️⃣ Parallel Processing with Workers
         * The program uses multiprocessing workers to speed up batch processing.
         * Number of workers is set in NUM_WORKERS = 4 (configurable).
         * Each worker processes a batch of JSON files in parallel, reducing execution time.

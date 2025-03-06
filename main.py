@@ -29,6 +29,7 @@ def main():
 
     conditional_probabilities = {
         (company, skill): (global_company_skill_counts[(company, skill)] / TOTAL_DEVELOPERS) /(company_frequencies[company] /TOTAL_DEVELOPERS)
+        
         for (company, skill) in global_company_skill_counts
         if company_frequencies[company] > 0
     }
